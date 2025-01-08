@@ -1,5 +1,7 @@
 #/bin/sh
 
+set -x
+
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <output> <record_time_in_seconds>"
     exit 1
@@ -31,18 +33,6 @@ sudo perf record \
 -e  irq_vectors:thermal_apic_exit          \
 -e  irq_vectors:threshold_apic_entry       \
 -e  irq_vectors:threshold_apic_exit        \
--e  irq_vectors:vector_activate            \
--e  irq_vectors:vector_alloc               \
--e  irq_vectors:vector_alloc_managed       \
--e  irq_vectors:vector_clear               \
--e  irq_vectors:vector_config              \
--e  irq_vectors:vector_deactivate          \
--e  irq_vectors:vector_free_moved          \
--e  irq_vectors:vector_reserve             \
--e  irq_vectors:vector_reserve_managed     \
--e  irq_vectors:vector_setup               \
--e  irq_vectors:vector_teardown            \
--e  irq_vectors:vector_update              \
 -e  irq_vectors:x86_platform_ipi_entry     \
 -e  irq_vectors:x86_platform_ipi_exit      \
 -o $OUTPUT  \
