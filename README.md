@@ -11,4 +11,4 @@ Convert perf data into ctf formated data
 perf data convert -i out.perf --to-ctf ./ctf
 ```
 
-Import ctf data files in trace-compase to visualize the schedule and irq behaviors
+Import ctf data files in trace-compass to visualize the schedule and irq behaviors
