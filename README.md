@@ -12,3 +12,6 @@ perf data convert -i out.perf --to-ctf ./ctf
 ```
 
 Import ctf data files in trace-compass to visualize the schedule and irq behaviors
+
+## reference
+https://perfwiki.github.io/main/tutorial/
